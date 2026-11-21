@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Telugu Song Finder · తెలుగు పాట</title>
+<meta name="description" content="Describe a mood in English, Telugu or Tenglish and find the right Telugu song, with YouTube links. 21,000+ songs.">
+<meta name="theme-color" content="#2a0f2e">
+<meta property="og:title" content="Telugu Song Finder · తెలుగు పాట">
+<meta property="og:description" content="Type a feeling, get the Telugu song. Apology, romance, wedding, amma, devotional, mass…">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="brand"><span class="logo">🎵</span><div><h1>Telugu Song Finder</h1><p class="te">మీ మూడ్ చెప్పండి, పాట మేము చెబుతాం</p></div></div>
+  <form id="f" class="search" role="search" autocomplete="off">
+    <input id="q" type="search" enterkeyhint="search" placeholder="Tell the situation, e.g. Kalyani is angry, I skipped our movie" aria-label="Describe the song you want">
+    <button type="submit" aria-label="Search">🔍</button>
+  </form>
+  <div id="chips" class="chips" role="group" aria-label="Moods"></div>
+  <div id="ai" class="ai"></div>
+</header>
+<main>
+  <div id="status" class="status" aria-live="polite">Loading songs…</div>
+  <section id="results" class="results"></section>
+  <button id="more" class="more" hidden>Show more</button>
+</main>
+<footer>
+  <p>Song details only (title, film, singers, composer) from <a href="https://www.wikipedia.org" target="_blank" rel="noopener">Wikipedia</a>, <a href="https://musicbrainz.org" target="_blank" rel="noopener">MusicBrainz</a> and <a href="https://www.wikidata.org" target="_blank" rel="noopener">Wikidata</a>. No lyrics are stored. Videos play from YouTube. Moods are partly auto-guessed, so some may be off.</p>
+  <p id="ver" class="ver"></p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
