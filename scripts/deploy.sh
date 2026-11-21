@@ -12,7 +12,8 @@ if [ ! -d .deploy/.git ]; then
   fi
 fi
 git -C .deploy pull -q --ff-only origin gh-pages 2>/dev/null || true
-rsync -a --delete --exclude .git --exclude .nojekyll site/ .deploy/
+find .deploy -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+cp -a site/. .deploy/
 touch .deploy/.nojekyll
 cd .deploy && git add -A
 if git diff --cached --quiet; then echo "nothing to deploy"; exit 0; fi
