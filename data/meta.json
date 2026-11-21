@@ -1,0 +1,1 @@
+{"model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2", "n": 21796, "dim": 384, "scale": 0.24656276404857635, "version": "dd03c82568", "youtube": {"direct": 829, "candidate": 142, "search": 20825}, "enriched": 2187, "curated": 40}
